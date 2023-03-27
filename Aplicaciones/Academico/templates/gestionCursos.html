@@ -13,16 +13,16 @@
         </div>
         {% endfor %}
         {% endif %}
-        <h2>Gestión de Curso</h2>
+        <h2>Añadir Cursos</h2>
         <div class="card">
             <div class="card-body">
                 <form action="/registrarCurso/" method="POST">{% csrf_token %}
                     <div class="form-group">
-                        <input type="text" id="txtCodigo" name="txtCodigo" class="form-control" placeholder="Código"
+                        <input type="text" id="txtCodigo" name="txtCodigo" class="form-control" placeholder="Código del Curso"
                             minlength="6" maxlength="6" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Nombre"
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Nombre del Curso"
                             maxlength="50" required>
                     </div>
                     <div class="form-group">
@@ -30,22 +30,22 @@
                             value="1" required>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                        <button type="submit" class="btn btn-success btn-block text-white">Registrar Curso</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
-        <h1>Listado de Cursos</h1>
+        <h1>Listas de Cursos ISTG</h1>
         <div class="table-responsive py-2">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Código</th>
-                        <th>Nombre</th>
-                        <th>Créditos</th>
+                        <th>Código Curso</th>
+                        <th>Nombre Curso</th>
+                        <th>Créditos ISTG</th>
                         <th colspan="2">Opciones</th>
                     </tr>
                 </thead>
@@ -56,7 +56,7 @@
                         <td>{{c.codigo}}</td>
                         <td>{{c.nombre}}</td>
                         <td>{{c.creditos}}</td>
-                        <td><a href="edicionCurso/{{c.codigo}}" class="btn btn-info">Editar</a></td>
+                        <td><a href="edicionCurso/{{c.codigo}}" class="btn btn-info">Editar </a></td>
                         <td><a href="eliminarCurso/{{c.codigo}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
                     </tr>
                     {% endfor %}
@@ -64,5 +64,10 @@
             </table>
         </div>
     </div>
+</div>
+<div align="center" class="pop">
+	<font>
+		<h1>Derechos de Autor Resevados : Martha Corozo</h1>
+	</font>
 </div>
 {% endblock %}

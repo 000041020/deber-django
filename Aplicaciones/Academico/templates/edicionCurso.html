@@ -5,7 +5,7 @@
 {% block body %}
 <div class="row">
     <div class="col-md-4 offset-md-4">
-        <h2>Edición de Curso</h2>
+        <h2>Editar Cursos ISTG</h2>
         <div class="card">
             <div class="card-body">
                 <form action="/editarCurso/" method="POST">{% csrf_token %}
@@ -22,11 +22,17 @@
                             value="1" required>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar Cambios</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+<div align="center" class="pop">
+	<font>
+		<h1>Derechos de Autor Resevados : Martha Corozo</h1>
+	</font>
+</div>
+
 {% endblock %}
